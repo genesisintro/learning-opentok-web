@@ -1,1 +1,1 @@
-var SAMPLE_SERVER_BASE_URL = 'https:learningchat.herokuapp.com';
+var SAMPLE_SERVER_BASE_URL = 'http://YOUR-SERVER-URL';
