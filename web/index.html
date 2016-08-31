@@ -1,23 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title> OpenTok Getting Started </title>
-    <link href="/css/app.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <title>AV Sample App</title>
 
-    <script src="https://static.opentok.com/v2/js/opentok.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JS -->
+    <script src="https://static.opentok.com/v2/js/opentok.min.js" type="text/javascript" defer></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js" defer></script>
+    <script src="js/components/opentok-solutions-logging.js" type="text/javascript" defer></script>
+    <script src="js/components/opentok-one-to-one-communication.js" type="text/javascript" defer></script>
+    <script src="js/app.js" type="text/javascript" defer></script>
+
 </head>
 
 <body>
-
-    <div id="videos">
-        <div id="subscriber"></div>
-        <div id="publisher"></div>
+    <div id="main" class="main-container">
+        <div id="videoContainer" class="video-container">
+            <div id="videoHolderSmall" class="video-wrap primary-video video-background"></div>
+            <div id="feedControls" class="local-controls">
+                <div id="enableLocalVideo" class="video-control circle video enabled" style="display:none;"></div>
+                <div id="callActive" class="video-control circle call"></div>
+                <div id="enableLocalAudio" class="video-control circle microphone enabled" style="display:none;"></div>
+            </div>
+            <div id="videoHolderBig" class="video-wrap secondary-video" style="display:none;"></div>
+            <div id="remoteControls" class="remote-controls" style="display:none;">
+                <div id="enableRemoteAudio" class="video-control audio" id="enableRemoteAudio"></div>
+                <div id="enableRemoteVideo" class="video-control video"></div>
+            </div>
+        </div>
     </div>
-
-    <script type="text/javascript" src="/js/config.js"></script>
-    <script type="text/javascript" src="/js/app.js"></script>
 </body>
 
 </html>
